@@ -44,6 +44,7 @@ public class ClienteBean {
         contexto.addMessage(null, new FacesMessage("Cliente Cadastrado!", ""));
         this.cliente = new Cliente();
         this.endereco = new Endereco();
+        listaClientes = clienteDAO.listar();
         return null;
     }
 
@@ -100,6 +101,7 @@ public class ClienteBean {
         msg = new FacesMessage(FacesMessage.SEVERITY_INFO,
                 "Cliente removido com sucesso!", "");
         context.addMessage(null, msg);
+        listaClientes = clienteDAO.listar();
         return null;
     }
 
@@ -117,6 +119,7 @@ public class ClienteBean {
                 "Cliente alterado com sucesso!", "");
         cliente = new Cliente();
         context.addMessage(null, msg);
+        listaClientes = clienteDAO.listar();
         return "ConsultaCliente?faces-redirect=true";
     }
 

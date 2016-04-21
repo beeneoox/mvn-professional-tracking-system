@@ -56,6 +56,7 @@ public class ProfissionalBean {
         this.endereco = new Endereco();
         this.categoria = new Categoria();
         this.idCategoria = 0;
+        listaProfissionais = profissionalDAO.listar();
         return null;
     }
 
@@ -65,6 +66,7 @@ public class ProfissionalBean {
         FacesContext contexto = FacesContext.getCurrentInstance();
         contexto.addMessage(null, new FacesMessage("Categoria Cadastrada!", ""));
         this.categoria = new Categoria();
+        listaProfissionais = profissionalDAO.listar();
         return null;
     }
 

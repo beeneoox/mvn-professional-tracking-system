@@ -72,7 +72,7 @@ a {
     min-width: 600px;
     min-height: 600px;
     overflow: auto!important;
-    background: linear-gradient(rgba(26, 26, 255,0.2),rgba(26, 26, 255,0.3));
+    background: linear-gradient(rgba(26, 26, 255,0.3),rgba(26, 26, 255,0.1));
 }
 #content{
     min-width: 600px;

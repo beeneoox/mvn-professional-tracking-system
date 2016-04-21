@@ -32,8 +32,7 @@ public class Cliente implements Serializable {
     @NotEmpty
     private String senha;
 
-    @NotEmpty
-    @CPF
+    @NotEmpty   
     private String CPF;
 
     @OneToOne

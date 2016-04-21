@@ -35,7 +35,7 @@ public class Profissional implements Serializable {
     @NotEmpty
     private String senha;
 
-    @CPF
+    
     @NotEmpty
     private String CPF;
 

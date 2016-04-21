@@ -6,7 +6,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="template/LayoutPadrao.xhtml">
-
+       
         <ui:define name="content">
             
             <p:growl/>
@@ -52,9 +52,12 @@
                     
                     <p:outputLabel value="Telefone Celular: " for="txtTelefoneCelular"/>
                     <p:inputText id="txtTelefoneCelular" maxlength="15" value="#{clienteBean.cliente.telefoneCelular}"/>   
-                    
-                    <p:commandButton ajax="false" value="Cadastrar" action="#{clienteBean.incluir()}"/>
-                    <p:outputLabel/>
+                    <f:facet name="footer">
+                        <h:panelGroup>
+                        <p:commandButton ajax="false" value="Cadastrar" action="#{clienteBean.incluir()}" style="width: 49%"  />
+                        <p:commandButton  value="Cancelar" action="index" style="width: 49%" />
+                        </h:panelGroup>
+                    </f:facet>
                 </p:panelGrid>                
 
 

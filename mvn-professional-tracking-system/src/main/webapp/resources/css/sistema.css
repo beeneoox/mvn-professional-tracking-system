@@ -53,8 +53,9 @@ body {
     background:rgba(0,0,0,0.4);
     height: 100%;    
 }
+/*<p:graphicImage id="equipe" title="Equipe de Desenvolvimento" library="img" name="trab2.png"  width="80"/>*/
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;    
@@ -67,7 +68,19 @@ a {
     font-weight: bold;
     text-decoration: none!important;
 }
+.right_content{ 
+    min-width: 600px;
+    min-height: 600px;
+    overflow: auto!important;
+    background: linear-gradient(rgba(26, 26, 255,0.2),rgba(26, 26, 255,0.3));
+}
+#content{
+    min-width: 600px;
+    min-height: 600px;
+    overflow:auto!important;
+}
 .content  {
+    
     /*no size*/
 }
 .form-messages .error {

@@ -99,7 +99,13 @@ input[type="text"]:disabled {
     font-weight: bold;
     opacity: 10;
 }
-
+.box-lista{
+    display: inline-block;
+    background: linear-gradient(orange,tomato);
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
 
 
 /* AOS 400px muda dispocição da tela rever semi responsivo by Igor 1824 08042016 padronizar com jquery incluir iphone*/

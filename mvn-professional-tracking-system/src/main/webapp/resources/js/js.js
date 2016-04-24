@@ -1,7 +1,7 @@
 
-    $(window).load(function () {
-        $(".menu").click(function () {
-            $("#left").slideToggle('slow');
-            
-        });
-    });
+//    $(window).load(function () {
+//        $(".menu").click(function () {
+//            $("#left").slideToggle('slow');
+//            
+//        });
+//    });

@@ -2,12 +2,14 @@
     Created on : 03/04/2016, 01:44:35
     Author     : Bruno
     version on : 08/04/2016, 13:23:15
+    version on : 23/04/2016, 23:16:06
     Author     : Igor
 */
 @import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption);
-@import url(https://fonts.googleapis.com/css?family=Cuprum);
+@import url(https://fonts.googleapis.com/css?family=Boogaloo);
 *{
-    box-sizing: border-box;margin: 0;
+    box-sizing: border-box!important;
+    margin: 0;
     border-radius: 0!important;
 }
 html{
@@ -20,37 +22,55 @@ body {
     height: 100%;
     width: 100%;
 }
-#login{
-    /*segunda sprint*/    
+.home-efeito img{  
+    position: fixed; 
+    right: 0; 
+    top: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -10;
+    filter: contrast(1);
+    animation-name: home;
+    animation-duration: 4s;
+}
+@keyframes home {
+    from {filter: blur(50px) contrast(5);}
+    to {filter:blur(1px);}
 }
 .home{
     height: 100%;
-    min-height: 480px;
-    background-image: url('img/home.jpg');
-    background-size: cover;
+    min-height: 480px;     
 }
 .home h1{
     font-family: 'PT Serif Caption', serif;
-    text-shadow:#000 0.5px -0.5px, #000 -0.5px 1px, #000 0.5px 0.5px, #000 -0.5px -0.5px;    
+    text-shadow:#000 1px -1px, #000 -1px 1px, #000 1px 1px, #000 -1px -1px;    
     color: white;
     text-align: center;
-    font-size: 5vw;        
+    font-size: 6vw;        
 }
 .div{
-    border-top: 5px solid white;
+    border-top: 0.5vw solid white;
     width: 90%;    
-    margin: auto;
+    margin: auto;    
 }
 .home p{
     text-align: center;
-    color: white;
-    font-size: 22px; 
-    font-family: 'Cuprum', sans-serif;     
+    color:rgb(0, 51, 102);
+    font-size: 28px; 
+    font-family: 'Boogaloo', cursive;    
 }
-
-
-.layer{
-    background:rgba(0,0,0,0.4);
+.content section {  
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    transition: all ease-in-out 1s;
+}
+.content section:hover{
+    background: rgba(255,255,255,0.9);
+}
+.layer{    
     height: 100%;    
 }
 /*<p:graphicImage id="equipe" title="Equipe de Desenvolvimento" library="img" name="trab2.png"  width="80"/>*/
@@ -61,7 +81,7 @@ footer{
     text-align: center;    
 }
 code{
-    background: rgb(102, 102, 102);
+    background: yellow;
     display: block;    
 }
 a {
@@ -79,26 +99,11 @@ a {
     min-height: 600px;
     overflow:auto!important;
 }
-.content  {
-    
-    /*no size*/
-}
-.form-messages .error {
-    color: #e81f1f;
-}
-.form-messages .info {
-    color: #156b2a;
-}
 .formularios{
     margin: auto;
     border: 5px solid gray;    
 }
-
-input[type="text"]:disabled {
-    color: blue;
-    font-weight: bold;
-    opacity: 10;
-}
+/*LISTAGEM DE PROFISSIONAIS POR CATEGORIA*/
 .box-lista{
     display: inline-block;
     background: linear-gradient(orange,tomato);
@@ -122,5 +127,9 @@ input[type="text"]:disabled {
     }
     #equipe{
         visibility:hidden ;
+    }
+    #left{
+        display: none;
+        width: 100%;
     }
 }
